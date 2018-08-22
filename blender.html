@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="myNav" class="overlay">
+        <!-- Navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="inspiration.html">Inspirations</a>
+            <a href="blender.html">Blender</a>
+            <a href="lightingrender.html">Lighting and Rendering</a>
+            <a href="fusion360.html">Fusion 360</a>
+            <a href="model.html">Model</a>
+            <a href="legal.html">Legal</a>
+        </div>
+    </div>
+
+
+    <span onclick="openNav()"><img src="images/menu%20red.png" width="40px"></span>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+
+    </script>
+
+    <div class="pro-title">
+        <h1>Blender - modeling and texture</h1>
+    </div>
+    <!-- Slide show -->
+    <div class="blenderGal">
+
+        <div class="blenderImg fade">
+            <div class="numbertext">1 / 12</div>
+            <img src="process/1.png" style="width:100%">
+        </div>
+
+        <div class="blenderImg fade">
+            <div class="numbertext">2 / 12</div>
+            <img src="process/2.png" style="width:100%">
+        </div>
+
+        <div class="blenderImg fade">
+            <div class="numbertext">3 / 12</div>
+            <img src="process/3.png" style="width:100%">
+        </div>
+
+        <div class="blenderImg fade">
+            <div class="numbertext">4 / 12</div>
+            <img src="process/4.png" style="width:100%">
+
+        </div>
+
+        <div class="blenderImg fade">
+            <div class="numbertext">5 / 12</div>
+            <img src="process/5.png" style="width:100%">
+        </div>
+
+        <div class="blenderImg fade">
+            <div class="numbertext">6 / 12</div>
+            <img src="process/6.png" style="width:100%">
+        </div>
+
+        <div class="blenderImg fade">
+            <div class="numbertext">7 / 12</div>
+            <img src="process/7.png" style="width:100%">
+        </div>
+
+        <div class="blenderImg fade">
+            <div class="numbertext">8 / 12</div>
+            <img src="process/8.png" style="width:100%">
+        </div>
+
+        <div class="blenderImg fade">
+            <div class="numbertext">9 / 12</div>
+            <img src="process/9.png" style="width:100%">
+        </div>
+
+        <div class="blenderImg fade">
+            <div class="numbertext">10 / 12</div>
+            <img src="process/10.png" style="width:100%">
+        </div>
+
+        <div class="blenderImg fade">
+            <div class="numbertext">11 / 12</div>
+            <img src="process/11.png" style="width:100%">
+        </div>
+
+        <div class="blenderImg fade">
+            <div class="numbertext">12 / 12</div>
+            <img src="process/12.png" style="width:100%">
+        </div>
+    </div>
+    <br>
+    <!-- Java script for the slide show -->
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("blenderImg");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000);
+        }
+
+    </script>
+
+    <div class="pro-content">
+        <p>For the head of the hammer, I started with a cylinder with a mirror multiplier so that I only need to model one side of the hammer and blender will automaticly generate the other side for me. I then used extract and scale to model the hammer. I also used the subdivision surfaces multiplier to make sure that the cylinder part of the model is actually a cylinder instead of a polygon. The reason why I didn't just give the cylinder more surfaces when I created it is because that will increase the amount of vertices that I have to work with, which will make everything slower and harder to model. The subdivision surfaces multiplier only increases the amount of surfaces when the model is being rendered. I set it to increase the surfaces by 5 times when rendered. I had to use loop cuts to restrict the multiplier so that it doesn't smooth out the model too much. I had to make two loop cuts around the edges that I wanted to be sharp, so that the multiplier didn't smooth them out completely. I used the same method to model the handle of the hammer.</p>
+        <br>
+        <p>I used the knife tool to cut out edges so that I can extrude the surfaces downwards to create the pattern on the ring between the head of the hemmer and the handle. I then used the simply deform and array multipliers to duplicate and bend the blocks of pattern so that it fits perfectly around the dent I made on the hammer head.</p>
+        <br>
+        <p>I created a small rectangle and used the spin tool to duplicate it. I then rotated the ring and resized it to fit in the hammer head. I duplicated the ring and resized, and stretched them to fit deeper into the hammer, creating the turbo. I used the same method to create the ring of spikes around the cone that's in the middle of the turbo.</p>
+        <br>
+        <p>For the textures, I used the node editor inside the cycles render engine that comes with blender. I created my own node group that used Physics based rendering (PBR) to simulate the fresnel, reflection, index of refraction and so on. I used a normal map that I downloaded off the internet to add dents and scratches to my model. I also created a node group with the exact RGBA code of metals that I thought I might use to make it easier for me to choose colors.</p>
+        <br>
+        <p>The glass case was made by creating a cube and stretching it to fit around the hammer and then creating a smaller rectangle on the base of the cube, extruding it upwards, creating a casing. I then used the glass BSDF node to create the material. I then made it appear as a diffused object to other meshes to minimize firefly creates in cycles render with a light path node.</p>
+    </div>
+
+</body>
+
+</html>

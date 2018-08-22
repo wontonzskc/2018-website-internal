@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="index">
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="inspiration.html">Inspirations</a>
+                <a href="blender.html">Blender</a>
+                <a href="fusion360.html">Fusion 360</a>
+                <a href="model.html">Model</a>
+                <a href="render.html">Render</a>
+            </div>
+        </div>
+    </div>
+
+    <span onclick="openNav()"><img src="images/menu%20red.png" width="40px"></span>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+</body>
+
+</html>
