@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspiration</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="inspiration.html">Inspirations</a>
+            <a href="blender.html">Blender</a>
+            <a href="lightingrender.html">Lighting and Rendering</a>
+            <a href="fusion360.html">Fusion 360</a>
+            <a href="model.html">Model</a>
+            <a href="legal.html">Legal</a>
+        </div>
+    </div>
+
+    <span onclick="openNav()"><img src="images/menu%20red.png" width="40px"></span>
+
+    <div class="insp-title">
+        <h1>Inspirations</h1>
+    </div>
+
+    <div class="insp-content">
+        <p>I used these photos to base my model off. The turbo in my hammer was inspired by the engine of a plane, I thought I could make the turbo of my hammer look more interesting by changing the angle of the blades to be a lot steeper, and I had added more layers of blades. I put rings of light around the handle of the hammer, and I gave the connector between the main body of the hammer and the handle a pattern. I gave the hammer a gunmetal color, the connector a nickel color. I gave the entire hammer (excluding the rings on the handle and the entire turbo) a scratched texture to make it look some what used. I think that my model has color, line (since it has the textures and patterns), size (from the different sized cylinders), texture and value (from the rendered images)</p>
+    </div>
+
+    <!-- Image gallery -->
+    <div class="gallery">
+        <div class="iphoto-m">
+            <div class="iphoto">
+                <a href="https://www.deviantart.com/ah-kai/art/Sci-fi-Hammer-10-506234675" target="_blank"><img src="images/1.jpg"></a></div>
+            <div class="iphoto">
+                <a href="https://commons.wikimedia.org/wiki/File:Il-76TD_Soloviev_aircraft_engine.JPG" target="_blank"><img src="images/2.jpg"></a></div>
+            <div class="iphoto">
+                <a href="https://www.deviantart.com/ah-kai/art/Sci-fi-Hammer-505483258" target="_blank"><img src="images/3.jpg"></a></div>
+            <div class="iphoto">
+                <a href="https://www.deviantart.com/silberius/art/Sci-fi-Jet-2-490213412" target="_blank"><img src="images/4.jpg"></a></div>
+
+        </div>
+    </div>
+
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+</body>
+
+</html>
